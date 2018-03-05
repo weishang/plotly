@@ -27,15 +27,26 @@ var trace3 = {
 
 var data = [trace1, trace2, trace3];
 
-var layout = {};
+var layout = {
+  autosize: true,
+  xaxis: {
+    fixedrange: false,
+    layer: 'below traces'
+  },
+  yaxis: {
+    fixedrange: false,
+    layer: 'below traces'
+  },
+};
 
 Plotly.newPlot('plotly', data, layout);
 
 var myPlot = document.getElementById('plotly');
 
-myPlot.on('plotly_click', function(){
+myPlot.on('plotly_click', function () {
   alert('You clicked this Plotly chart!');
 });
 
+// https://plot.ly/javascript/
 // http://bl.ocks.org/niclasmattsson/7bceb05fba6c71c78d507adae3d29417
 // https://github.com/d3/d3-drag

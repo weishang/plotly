@@ -1,0 +1,3 @@
+.scatterlayer .trace:last-child path {
+    pointer-events: all;
+}
